@@ -1,0 +1,142 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+
+}
+body{
+  background-color:hsl(210, 46%, 95%);
+}
+
+h2,h3,p {
+  color: hsl(0, 0%, 100%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+h2{
+  margin-top:1rem;
+}
+h3{
+font-size: 1.2rem;
+}
+p{
+  color:hsl(0, 0%, 81%);
+}
+.grey-font h2{
+  color: hsl(217, 19%, 35%);
+}
+.grey-font p{
+  color: hsl(0, 0%, 81%);
+}
+.grey-font h3{
+  color:hsl(217, 19%, 35%);
+}
+.grey-font .atb {
+  color:hsl(217, 19%, 65%);
+}
+img{
+  width:3rem;
+  border-radius: 100%;
+  margin-right:1rem;
+}
+
+.image-daniel, .image-patrick{
+  border: 3px solid #b19cd9;
+}
+
+.bio{
+  display:inline-block;
+}
+
+.status {
+  font-weight:500;
+  color:hsl(0, 0%, 81%);
+}
+
+.atb {
+
+line-height: 1.5rem;
+margin-top:2rem;
+}
+
+.container {
+    padding:4rem 13rem;
+    display:grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr;
+ grid-template-rows: 1fr 1fr;
+ grid-template-areas:
+ "daniel daniel jonathan kira"
+ "jeanette patrick patrick kira";
+
+}
+
+.daniel{
+    margin-right:2rem;
+    margin-bottom: 2rem;
+    background-color:hsl(263, 55%, 52%);
+
+    background-image:url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 8rem;
+
+    grid-area:daniel;
+}
+
+.jonathan {
+    margin-bottom:2rem;
+    background-color: hsl(217, 19%, 35%);
+    grid-area:jonathan;
+
+
+}
+
+
+.jeanette {
+    margin-right:2rem;
+    background-color:hsl(0, 0%, 100%);
+    grid-area:jeanette;
+}
+
+
+.patrick{
+    background-color:hsl(219, 29%, 14%);
+    grid-area: patrick;
+}
+
+.kira {
+    margin-left:2rem;
+    background-color:hsl(0, 0%, 100%);
+    grid-area: kira;
+}
+
+.daniel, .jonathan, .jeanette, .patrick, .kira {
+  padding: 2.5rem 4rem;
+  border-radius:8px;
+}
+
+
+
+@media (max-width:1300px) {
+
+  .container {
+   padding:4rem 2rem;
+   display:grid;
+   grid-template-columns: 1fr ;
+   grid-template-rows: auto;
+   grid-template-areas:
+    "daniel"
+    "jonathan"
+    "jeanette"
+    "patrick"
+    "kira"
+
+  }
+
+.daniel {
+  background-position: top right 2rem;
+}
+.daniel, .jonathan, .jeanette, .patrick, .kira {
+    width:80%;
+    margin:0 auto 2rem;
+    padding:2.5rem 2rem;
+  }
